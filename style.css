@@ -649,9 +649,18 @@ html {
         font-size: 5rem;
     }
 
+    .home-img{
+        display: flex;
+        justify-content: flex-end;  /* Align image to the right */
+        width: 100%;
+    }
+
     .home-img img {
-        width: 70vw;
+        width: 60%;
         margin-top: 4rem;
+        margin-bottom: 40px;
+        margin-left: -50px; 
+        
     }
 
     /* About Section */
@@ -659,14 +668,58 @@ html {
         flex-direction: column-reverse;
     }
 
+    
+
     .about-img {
-        width: 70vw;
-        margin-top: 4rem;
-        margin-right: 2rem;
+        display: flex;
+        justify-content: flex-end;  /* Align image to the right */
+        width: 100%;
     }
 
+    .about-img img {
+        width: 60%;  /* Adjust image size */
+        padding-bottom: 40px;
+        margin-top: -60px;
+    }
+
+    .about-content{
+        margin-bottom: 40px;
+    }
+
+    
+
     /* Services and Portfolio */
-    .services h2,
+    .services h2{
+        margin-bottom: 3rem;
+    }
+
+    .skills-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    
+      .skills-column {
+        flex: 1 1 45%;
+        margin: 10px;
+        box-sizing: border-box;
+      }
+    
+      .skills-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    
+      .progress {
+        margin-bottom: 15px;
+      }
+    
+      .skills-box .progress:last-child {
+        margin-bottom: 0;
+      }
+
     .portfolio h2 {
         margin-bottom: 3rem;
     }
@@ -676,8 +729,37 @@ html {
     }
 }
 
+
 /* Styles for smaller screens less than 715px (Mobile screens) */
 @media (max-width: 715px) {
+
+    .home-img img{
+        width: 60%;
+         margin-bottom: 40px;
+    }
+        .about {
+        display: flex;
+        flex-direction: column;  /* Column-wise layout */
+        justify-content: center;
+        align-items: center;  /* Horizontally center the content */
+    }
+
+    .about-img {
+        display: flex;
+        justify-content: flex-end;  /* Align image to the right */
+        width: 100%;
+    }
+
+    .about-img img {
+        width: 60%;  /* Adjust image size */
+        padding-bottom: 20px;
+        margin-top: -60px;
+    }
+
+    .about-content{
+        margin-bottom: 40px;
+    }
+
     .portfolio-container {
         grid-template-columns: 1fr; /* Single column */
     }
@@ -689,6 +771,14 @@ html {
         font-size: 45%;
     }
 
+    .skills .title {
+        margin: 0 auto; /* Horizontally center the element */
+        padding: 10px; /* Add some space around the element */
+        display: block; /* Ensure it behaves like a block element */
+        text-align: center; /* Optional: If you want the text itself centered */
+        width: fit-content; /* Shrinks the width to content size */
+    }    
+
     .contact form .input-box input {
         width: 100%;
     }
@@ -696,10 +786,25 @@ html {
 
 /* Styles for very small screens less than 350px */
 @media (max-width: 350px) {
-    .home-img img,
+     .home-img img {
+        width: 90vw; /* Existing flexible width */
+        margin-left: -10px; /* Move image to the left by 10px */
+        /* Optional: Use transform for more precise control */
+        /* transform: translateX(-10px); */
+    }
+    
     .about-img img {
         width: 90vw; /* More flexible images */
+        margin-left: -10px;
     }
+
+    .skills .title {
+        margin: 0 auto; /* Horizontally center the element */
+        padding: 10px; /* Add some space around the element */
+        display: block; /* Ensure it behaves like a block element */
+        text-align: center; /* Optional: If you want the text itself centered */
+        width: fit-content; /* Shrinks the width to content size */
+    }    
 
     .footer {
         flex-direction: column;
